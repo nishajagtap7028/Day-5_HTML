@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html >
+<head>
+  
+  <title>Flexbox Sky Layout</title>
+  <style>
+    /* RESET & BASE STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ddcde1;
+      color: #333;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    /* LAYOUT STYLES */
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #1d1b66;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #8ab8d6;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .main {
+      display: flex;
+      flex: 1;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .content {
+      flex: 2;
+      background-color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #f0fbff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background: #005f87;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* TABLE STYLES */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f8ff;
+    }
+
+    /* FORM STYLES */
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form input[type="submit"] {
+      background: #00aaff;
+      color: white;
+      border: none;
+      cursor: arrow;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: 0;
+      margin-top: 1rem;
+      border-radius: 5px;
+    }
+
+    /* REUSABLE UTILITY CLASSES */
+    .text-center { text-align: center; }
+    .mb-1 { margin-bottom: 1rem; }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- HEADER -->
+    <header>
+      <h1>Sky Layout with Flexbox</h1>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <a href="#">Home</a> | 
+      <a href="#">Gallery</a> | 
+      <a href="#">Details</a>
+    </nav>
+
+    <!-- MAIN SECTION -->
+    <div class="main">
+      
+      <!-- MAIN CONTENT -->
+      <section class="content">
+        <article>
+          <h2 class="mb-1">Team Members</h2>
+          <table>
+            <thead>
+              <tr><th>Name</th><th>Department</th><th>Position</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Sara</td><td>Marketing</td><td>Manager</td></tr>
+              <tr><td>Tans</td><td>Engineering</td><td>Lead Developer</td></tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article>
+          <h2 class="mb-1">Office Location</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." loading="lazy"></iframe>
+        </article>
+      </section>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h2 class="mb-1">Details</h2>
+        <form>
+          <label for="username">Name</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="useremail">Email</label>
+          <input type="email" id="useremail" name="useremail" required />
+
+          <label for="usermsg">Message</label>
+          <textarea id="usermsg" name="usermsg" rows="4"></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </aside>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 Flexbox Sky Layout. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <p>
+  
+    Reflection:
+    In this layout, I explored a new color palette with soft blues for a more calming visual design. 
+    Using Flexbox made it simple to adapt the two-column structure into a mobile-first responsive layout. 
+    One of the challenges was balancing the sidebar and main content spacing for both desktop and mobile.
+    I also improved the usability of the form with styled inputs and ensured all elements were inside 
+    
+  <p>
+</body>
+</html>
